@@ -19,3 +19,17 @@ toggle.addEventListener("click", () => {
 
     toggle.classList.toggle("active");
 });
+
+
+//modal script
+const open = document.getElementByID('open');
+const modalContainer = document.getElementById('modal-container');
+const close = document.getElementById('close');
+
+open.addEventListener('click', () =>{
+    modalContainer.classList.add('show');
+});
+
+close.addEventListener('click', () =>{
+    modalContainer.classList.remove('show');
+});
