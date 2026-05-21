@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
-:root{
+html {
+    font-size: 17px;
+}
+
+:root {
     /* base colors */
     --true-black: #000000;
     --true-white: #FFFFFF;
@@ -11,14 +15,131 @@
     --cedar: #412A16;
 
     /* light mode colors */
-    --lightmode-bg:var(--true-white);
-    --lightmode-text:var(--cedar);
+    --lightmode-bg: var(--true-white);
+    --lightmode-text: var(--cedar);
     --lightmode-btn-bg: var(--green-pea);
     --lightmode-btn-text: var(--pearl-beige);
 
     /* dark mode colors */
-    --darkmode-bg:var(--cedar);
-    --darkmode-text:var(--pearl-beige);
+    --darkmode-bg: var(--cedar);
+    --darkmode-text: var(--pearl-beige);
     --darkmode-btn-bg: var(--summer-green);
     --darkmode-btn-text: var(--cedar);
 }
+
+/* theme switch start  */
+.toggle {
+    height: 25px;
+    width: 60px;
+    background-color: var(--pearl-beige);
+    border: 2px solid var(--summer-green);
+    position: relative;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.toggle::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: var(--summer-green);
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+}
+
+.toggle.active::before {
+    background-color: var(--summer-green);
+    color: var(--green-pea);
+    left: calc(100% - 25px);
+}
+
+/* theme switch end */
+
+/* I leave little comments throughout my code to keep it clean and organized */
+
+
+/* typography start*/
+h1 {
+    font-family: "Figtree", sans-serif;
+    font-weight: 700;
+    font-size: 5.61rem;
+}
+
+h2 {
+    font-family: "Figtree", sans-serif;
+    font-weight: 700;
+    font-size: 4.209rem;
+
+}
+
+.subhead {
+    font-family: "Figtree", sans-serif;
+    font-weight: 500;
+    font-size: 3.157rem;
+}
+
+p {
+    font-family: "Figtree", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+/* typography end */
+
+/* color modes start */
+body {
+    background-color: var(--lightmode-bg);
+    color: var(--lightmode-text);
+
+    .cta {
+        background-color: var(--golden-apricot);
+        color: var(--cedar);
+    }
+
+    .btn-primary {
+        background-color: var(--lightmode-btn-bg);
+        color: var(--lightmode-btn-text);
+    }
+}
+
+body.dark {
+    background-color: var(--darkmode-bg);
+    color: var(--darkmode-text);
+}
+
+/* color modes end */
+
+/* global styles start */
+body {
+    margin: 32px 72px;
+}
+
+section {
+    margin: 32px 0px;
+}
+
+.cta {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0px;
+}
+
+.btn-primary {
+    padding: 10px 15px;
+    width: 150px;
+    height: 45px;
+    font-family: "Figtree", sans-serif;
+    font-weight: 500;
+    font-size: 1.333rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* global styles end */
