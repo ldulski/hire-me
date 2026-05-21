@@ -67,25 +67,71 @@ h1 {
     font-family: "Figtree", sans-serif;
     font-weight: 700;
     font-size: 5.61rem;
+    margin: 0px 0px 15px 0px;
 }
 
 h2 {
     font-family: "Figtree", sans-serif;
     font-weight: 700;
     font-size: 4.209rem;
+    margin: 0px 0px 15px 0px;
 
+}
+
+h3 {
+    font-family: "Figtree", sans-serif;
+    font-weight: 500;
+    font-size: 3.157rem;
+    margin: 0px 0px 15px 0px;
 }
 
 .subhead {
     font-family: "Figtree", sans-serif;
     font-weight: 500;
     font-size: 3.157rem;
+    margin: 0px 0px 15px 0px;
 }
 
 p {
     font-family: "Figtree", sans-serif;
     font-weight: 400;
     font-size: 1rem;
+    margin: 0px;
+}
+
+sup {
+    font-family: "Figtree", sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1rem;
+    /* margin: 0px 0px 450px 0px; */
+}
+
+#logo {
+    font-family: "Figtree", sans-serif;
+    font-weight: 700;
+    font-size: 1.777rem;
+}
+
+ul {
+    list-style-type: none;
+    font-family: "Figtree", sans-serif;
+    font-weight: 700;
+    font-size: 1.333rem;
+}
+
+li a {
+    font-family: "Figtree", sans-serif;
+    font-weight: 700;
+    font-size: 1.333rem;
+    text-decoration: none;
+    padding: 0px 15px;
+}
+
+.btn-primary {
+    font-family: "Figtree", sans-serif;
+    font-weight: 500;
+    font-size: 1.333rem;
 }
 
 /* typography end */
@@ -104,11 +150,53 @@ body {
         background-color: var(--lightmode-btn-bg);
         color: var(--lightmode-btn-text);
     }
+
+    #logo:hover {
+        color: var(--green-pea);
+    }
+
+    li a {
+        color: var(--lightmode-text);
+    }
+
+    iframe {
+        border: 2.5px solid var(--green-pea);
+        border-radius: 20px;
+    }
+
+    .modal-container {
+        background-color: var(--summer-green);
+        border: 2px solid var(--green-pea);
+        border-radius: 20px;
+    }
 }
 
 body.dark {
     background-color: var(--darkmode-bg);
     color: var(--darkmode-text);
+
+    .cta {
+        background-color: var(--golden-apricot);
+        color: var(--cedar);
+    }
+
+    .btn-primary {
+        background-color: var(--darkmode-btn-bg);
+        color: var(--darkmode-btn-text);
+    }
+
+    #logo:hover {
+        color: var(--summer-green);
+    }
+
+    li a {
+        color: var(--darkmode-text);
+    }
+
+    iframe {
+        border: 2.5px solid var(--pearl-beige);
+        border-radius: 20px;
+    }
 }
 
 /* color modes end */
@@ -134,12 +222,49 @@ section {
     padding: 10px 15px;
     width: 150px;
     height: 45px;
-    font-family: "Figtree", sans-serif;
-    font-weight: 500;
-    font-size: 1.333rem;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+footer div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.modal-container {
+    box-sizing: border-box;
+    max-width: 1200px;
+    padding: 15px 32px;
+}
+
+span.material-icons-outlined {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 32px;
+}
+
+img {
+    height: auto;
+    width: 75%;
 }
 
 /* global styles end */
